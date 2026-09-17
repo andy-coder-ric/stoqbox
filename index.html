@@ -63,25 +63,29 @@
     font-size:15px;
   }
   .hero{
+    background:linear-gradient(180deg, rgba(22,35,63,.78), rgba(22,35,63,.88)), url('images/facility.jpg') center/cover no-repeat;
+    padding:72px 24px 56px;
+    text-align:center;
+  }
+  .hero-inner{
     max-width:900px;
     margin:0 auto;
-    padding:56px 24px 40px;
-    text-align:center;
   }
   .hero h1{
     font-size:34px;
     margin-bottom:14px;
     line-height:1.2;
+    color:#fff;
   }
   .hero p.lead{
     font-size:18px;
-    color:var(--grey);
+    color:#dbe0ea;
     max-width:600px;
     margin:0 auto 28px;
   }
   .price-badge{
     display:inline-block;
-    background:var(--navy);
+    background:var(--orange);
     color:#fff;
     padding:8px 18px;
     border-radius:30px;
@@ -105,22 +109,6 @@
   }
   .btn-primary{background:var(--orange);color:#fff;}
   .btn-secondary{background:#25D366;color:#fff;}
-  section.facility{
-    max-width:900px;
-    margin:0 auto;
-    padding:0 24px 48px;
-  }
-  .facility img{
-    width:100%;
-    border-radius:14px;
-    display:block;
-  }
-  .facility p.caption{
-    text-align:center;
-    color:var(--grey);
-    font-size:13px;
-    margin-top:10px;
-  }
   section.sizes{
     background:#fff;
     padding:48px 24px;
@@ -204,15 +192,8 @@
   .security h2{
     text-align:center;
     font-size:26px;
-    margin-bottom:8px;
+    margin-bottom:32px;
     color:#fff;
-  }
-  .security p.sub{
-    text-align:center;
-    color:#cdd4e0;
-    font-size:14px;
-    max-width:520px;
-    margin:0 auto 32px;
   }
   .security-grid{
     display:grid;
@@ -279,34 +260,28 @@
 </header>
 
 <div class="hero">
-  <h1>
-    <span data-lang="pt">Precisa de espaço? Guarde aqui, perto de casa.</span>
-    <span data-lang="en" hidden>Need space? Store it here, close to home.</span>
-  </h1>
-  <p class="lead">
-    <span data-lang="pt">Boxes de self storage em Famalicão. Guarde o que não usa e recupere o espaço em casa.</span>
-    <span data-lang="en" hidden>Self storage boxes in Famalicão. Store what you don't use and get your space back at home.</span>
-  </p>
-  <div class="price-badge">
-    <span data-lang="pt">A partir de 175€/mês</span>
-    <span data-lang="en" hidden>From 175€/month</span>
-  </div>
-  <div class="cta-group">
-    <a class="btn btn-primary" href="tel:+351938437951">
-      <span data-lang="pt">📞 Ligar: 938 437 951</span>
-      <span data-lang="en" hidden>📞 Call: 938 437 951</span>
-    </a>
-    <a class="btn btn-secondary" id="whatsapp-btn" href="https://wa.me/351938437951?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20self%20storage%20StockBox" target="_blank" rel="noopener">WhatsApp</a>
+  <div class="hero-inner">
+    <h1>
+      <span data-lang="pt">Precisa de espaço? Guarde aqui, perto de casa.</span>
+      <span data-lang="en" hidden>Need space? Store it here, close to home.</span>
+    </h1>
+    <p class="lead">
+      <span data-lang="pt">Boxes de self storage em Famalicão. Guarde o que não usa e recupere o espaço em casa.</span>
+      <span data-lang="en" hidden>Self storage boxes in Famalicão. Store what you don't use and get your space back at home.</span>
+    </p>
+    <div class="price-badge">
+      <span data-lang="pt">A partir de 175€/mês</span>
+      <span data-lang="en" hidden>From 175€/month</span>
+    </div>
+    <div class="cta-group">
+      <a class="btn btn-primary" href="tel:+351938437951">
+        <span data-lang="pt">📞 Ligar: 938 437 951</span>
+        <span data-lang="en" hidden>📞 Call: 938 437 951</span>
+      </a>
+      <a class="btn btn-secondary" id="whatsapp-btn" href="https://wa.me/351938437951?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20self%20storage%20StockBox" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </div>
 </div>
-
-<section class="facility">
-  <img src="images/facility.jpg" alt="Corredor de self storage com boxes de porta metálica" loading="lazy">
-  <p class="caption">
-    <span data-lang="pt">Exemplo do tipo de instalação que vamos ter em Famalicão — foto ilustrativa, não é este espaço em concreto.</span>
-    <span data-lang="en" hidden>Example of the type of facility we'll have in Famalicão — illustrative photo, not this exact location.</span>
-  </p>
-</section>
 
 <section class="sizes">
   <div class="sizes-inner">
@@ -389,10 +364,6 @@
       <span data-lang="pt">Segurança em primeiro lugar</span>
       <span data-lang="en" hidden>Security first</span>
     </h2>
-    <p class="sub">
-      <span data-lang="pt">Fotos ilustrativas do tipo de segurança que o espaço vai ter — não são deste espaço em concreto, o local ainda está a ser preparado.</span>
-      <span data-lang="en" hidden>Illustrative photos of the type of security the facility will have — not this exact location, the facility is still being set up.</span>
-    </p>
     <div class="security-grid">
       <div class="security-item">
         <div class="sec-icon">

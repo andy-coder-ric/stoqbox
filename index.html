@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StockBox — Self Storage em Famalicão</title>
-<meta name="description" content="Arrume o que não usa, perto de casa. Boxes de self storage em Famalicão. Desde 17,50€/m².">
+<meta name="description" content="Arrume o que não usa, perto de casa. Boxes de self storage em Famalicão. A partir de 175€/mês.">
 <style>
   :root{
     --navy:#16233F;
@@ -27,6 +27,31 @@
     align-items:center;
     justify-content:space-between;
     border-bottom:1px solid #eee;
+    gap:14px;
+  }
+  .header-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .lang-toggle{
+    display:flex;
+    border:1px solid #ddd;
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .lang-toggle button{
+    border:none;
+    background:#fff;
+    color:var(--navy);
+    font-weight:700;
+    font-size:13px;
+    padding:8px 12px;
+    cursor:pointer;
+  }
+  .lang-toggle button.active{
+    background:var(--navy);
+    color:#fff;
   }
   .cta-top{
     background:var(--orange);
@@ -124,6 +149,11 @@
     font-weight:400;
     color:var(--grey);
   }
+  .card .permeter{
+    font-size:12px;
+    color:var(--grey);
+    margin-top:4px;
+  }
   section.why{
     max-width:900px;
     margin:0 auto;
@@ -159,6 +189,7 @@
     font-size:12px;
     color:#8592ab;
   }
+  [data-lang][hidden]{display:none;}
 </style>
 </head>
 <body>
@@ -171,70 +202,155 @@
     <text x="58" y="38" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#16233F">Stock<tspan fill="#FF6B35">Box</tspan></text>
     <text x="59" y="55" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5B6B85" letter-spacing="2">SELF STORAGE · FAMALICÃO</text>
   </svg>
-  <a class="cta-top" href="tel:+351938437951">Ligar agora</a>
+  <div class="header-actions">
+    <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+      <button type="button" id="btn-pt" class="active" onclick="setLang('pt')">PT</button>
+      <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <a class="cta-top" href="tel:+351938437951">
+      <span data-lang="pt">Ligar agora</span><span data-lang="en" hidden>Call now</span>
+    </a>
+  </div>
 </header>
 
 <div class="hero">
-  <h1>Precisa de espaço? Guarde aqui, perto de casa.</h1>
-  <p class="lead">Boxes de self storage em Famalicão. Guarde o que não usa e recupere o espaço em casa.</p>
-  <div class="price-badge">Desde 17,50€/m² por mês</div>
+  <h1>
+    <span data-lang="pt">Precisa de espaço? Guarde aqui, perto de casa.</span>
+    <span data-lang="en" hidden>Need space? Store it here, close to home.</span>
+  </h1>
+  <p class="lead">
+    <span data-lang="pt">Boxes de self storage em Famalicão. Guarde o que não usa e recupere o espaço em casa.</span>
+    <span data-lang="en" hidden>Self storage boxes in Famalicão. Store what you don't use and get your space back at home.</span>
+  </p>
+  <div class="price-badge">
+    <span data-lang="pt">A partir de 175€/mês</span>
+    <span data-lang="en" hidden>From 175€/month</span>
+  </div>
   <div class="cta-group">
-    <a class="btn btn-primary" href="tel:+351938437951">📞 Ligar: 938 437 951</a>
-    <a class="btn btn-secondary" href="https://wa.me/351938437951?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20self%20storage%20StockBox" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-primary" href="tel:+351938437951">
+      <span data-lang="pt">📞 Ligar: 938 437 951</span>
+      <span data-lang="en" hidden>📞 Call: 938 437 951</span>
+    </a>
+    <a class="btn btn-secondary" id="whatsapp-btn" href="https://wa.me/351938437951?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20self%20storage%20StockBox" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </div>
 
 <section class="sizes">
   <div class="sizes-inner">
-    <h2>Escolha o tamanho que precisa</h2>
+    <h2>
+      <span data-lang="pt">Escolha o tamanho que precisa</span>
+      <span data-lang="en" hidden>Choose the size you need</span>
+    </h2>
     <div class="size-cards">
       <div class="card">
         <div class="m2">10 m²</div>
-        <div class="desc">Ideal para caixas, móveis pequenos, arrumos de um T1.</div>
-        <div class="price">175€ <span>/mês</span></div>
+        <div class="desc">
+          <span data-lang="pt">Ideal para caixas, móveis pequenos, arrumos de um T1.</span>
+          <span data-lang="en" hidden>Ideal for boxes, small furniture, storage for a 1-bed apartment.</span>
+        </div>
+        <div class="price">175€ <span><span data-lang="pt">/mês</span><span data-lang="en" hidden>/month</span></span></div>
+        <div class="permeter">17,50€/m²</div>
       </div>
       <div class="card">
         <div class="m2">15 m²</div>
-        <div class="desc">Móveis de um T2, equipamento de loja ou oficina.</div>
-        <div class="price">262€ <span>/mês</span></div>
+        <div class="desc">
+          <span data-lang="pt">Móveis de um T2, equipamento de loja ou oficina.</span>
+          <span data-lang="en" hidden>Furniture from a 2-bed apartment, shop or workshop equipment.</span>
+        </div>
+        <div class="price">255€ <span><span data-lang="pt">/mês</span><span data-lang="en" hidden>/month</span></span></div>
+        <div class="permeter">17,00€/m²</div>
       </div>
       <div class="card">
         <div class="m2">20 m²</div>
-        <div class="desc">Mudança de casa inteira, stock sazonal de negócio.</div>
-        <div class="price">350€ <span>/mês</span></div>
+        <div class="desc">
+          <span data-lang="pt">Mudança de casa inteira, stock sazonal de negócio.</span>
+          <span data-lang="en" hidden>Whole house move, seasonal business stock.</span>
+        </div>
+        <div class="price">330€ <span><span data-lang="pt">/mês</span><span data-lang="en" hidden>/month</span></span></div>
+        <div class="permeter">16,50€/m²</div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="why">
-  <h2>Porquê o StockBox</h2>
+  <h2>
+    <span data-lang="pt">Porquê o StockBox</span>
+    <span data-lang="en" hidden>Why StockBox</span>
+  </h2>
   <div class="why-grid">
     <div class="why-item">
-      <h3>🏡 O espaço em casa, de volta</h3>
-      <p>A garagem, o sótão ou o quarto a mais ficam livres outra vez. As suas coisas continuam suas, só não estão a ocupar a sua casa.</p>
+      <h3>🏡 <span data-lang="pt">O espaço em casa, de volta</span><span data-lang="en" hidden>Get your space back at home</span></h3>
+      <p>
+        <span data-lang="pt">A garagem, o sótão ou o quarto a mais ficam livres outra vez. As suas coisas continuam suas, só não estão a ocupar a sua casa.</span>
+        <span data-lang="en" hidden>Your garage, attic or spare room become free again. Your things stay yours, they just don't take up space at home.</span>
+      </p>
     </div>
     <div class="why-item">
-      <h3>🔒 Entra e sai quando quiser</h3>
-      <p>Acesso fácil, sem marcar hora, sem papelada. Chega, abre, leva.</p>
+      <h3>🔒 <span data-lang="pt">Entra e sai quando quiser</span><span data-lang="en" hidden>Come and go whenever you like</span></h3>
+      <p>
+        <span data-lang="pt">Acesso fácil, sem marcar hora, sem papelada. Chega, abre, leva.</span>
+        <span data-lang="en" hidden>Easy access, no appointments, no paperwork. Show up, open up, take what you need.</span>
+      </p>
     </div>
     <div class="why-item">
-      <h3>💶 Preço claro, sem surpresas</h3>
-      <p>Sem depósitos escondidos, sem letra miúda. Sabe o que paga desde o início.</p>
+      <h3>💶 <span data-lang="pt">Preço claro, sem surpresas</span><span data-lang="en" hidden>Clear pricing, no surprises</span></h3>
+      <p>
+        <span data-lang="pt">Sem depósitos escondidos, sem letra miúda. Sabe o que paga desde o início.</span>
+        <span data-lang="en" hidden>No hidden deposits, no fine print. You know what you pay from day one.</span>
+      </p>
     </div>
     <div class="why-item">
-      <h3>📦 Sem compromisso longo</h3>
-      <p>Fique o tempo que precisar — um mês ou um ano.</p>
+      <h3>📦 <span data-lang="pt">Sem compromisso longo</span><span data-lang="en" hidden>No long-term commitment</span></h3>
+      <p>
+        <span data-lang="pt">Fique o tempo que precisar — um mês ou um ano.</span>
+        <span data-lang="en" hidden>Stay as long as you need — a month or a year.</span>
+      </p>
     </div>
   </div>
 </section>
 
 <footer>
-  <h2 style="color:#fff; font-size:24px;">Ainda tem dúvidas sobre o tamanho certo?</h2>
-  <p style="max-width:480px; margin:10px auto 0; color:#cdd4e0;">Ligue ou mande WhatsApp — respondemos no próprio dia.</p>
+  <h2 style="color:#fff; font-size:24px;">
+    <span data-lang="pt">Ainda tem dúvidas sobre o tamanho certo?</span>
+    <span data-lang="en" hidden>Still not sure which size is right?</span>
+  </h2>
+  <p style="max-width:480px; margin:10px auto 0; color:#cdd4e0;">
+    <span data-lang="pt">Ligue ou mande WhatsApp — respondemos no próprio dia.</span>
+    <span data-lang="en" hidden>Call or message us on WhatsApp — we reply the same day.</span>
+  </p>
   <a class="btn btn-primary" href="tel:+351938437951">📞 938 437 951</a>
   <p class="small">StockBox — Self Storage · Vila Nova de Famalicão</p>
 </footer>
+
+<script>
+  var WA_TEXT = {
+    pt: "Olá, quero saber mais sobre o self storage StockBox",
+    en: "Hi, I'd like to know more about StockBox self storage"
+  };
+  var TITLE = {
+    pt: "StockBox — Self Storage em Famalicão",
+    en: "StockBox — Self Storage in Famalicão"
+  };
+  var DESCRIPTION = {
+    pt: "Arrume o que não usa, perto de casa. Boxes de self storage em Famalicão. A partir de 175€/mês.",
+    en: "Store what you don't use, close to home. Self storage boxes in Famalicão. From 175€/month."
+  };
+  function setLang(lang){
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.hidden = el.getAttribute('data-lang') !== lang;
+    });
+    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.title = TITLE[lang];
+    var metaEl = document.querySelector('meta[name="description"]');
+    if (metaEl) metaEl.setAttribute('content', DESCRIPTION[lang]);
+    var wa = document.getElementById('whatsapp-btn');
+    wa.href = "https://wa.me/351938437951?text=" + encodeURIComponent(WA_TEXT[lang]);
+    document.documentElement.lang = lang === 'pt' ? 'pt-PT' : 'en';
+  }
+  setLang('pt');
+</script>
 
 </body>
 </html>

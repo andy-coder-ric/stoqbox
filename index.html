@@ -105,6 +105,22 @@
   }
   .btn-primary{background:var(--orange);color:#fff;}
   .btn-secondary{background:#25D366;color:#fff;}
+  section.facility{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 24px 48px;
+  }
+  .facility img{
+    width:100%;
+    border-radius:14px;
+    display:block;
+  }
+  .facility p.caption{
+    text-align:center;
+    color:var(--grey);
+    font-size:13px;
+    margin-top:10px;
+  }
   section.sizes{
     background:#fff;
     padding:48px 24px;
@@ -205,14 +221,17 @@
     text-align:center;
   }
   .sec-icon{
-    width:56px;
-    height:56px;
-    border-radius:50%;
-    background:var(--orange);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:14px;
+    overflow:hidden;
     margin:0 auto 14px;
+  }
+  .sec-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
   }
   .security-item h3{
     color:#fff;
@@ -280,6 +299,14 @@
     <a class="btn btn-secondary" id="whatsapp-btn" href="https://wa.me/351938437951?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20self%20storage%20StockBox" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </div>
+
+<section class="facility">
+  <img src="images/facility.jpg" alt="Corredor de self storage com boxes de porta metálica" loading="lazy">
+  <p class="caption">
+    <span data-lang="pt">Exemplo do tipo de instalação que vamos ter em Famalicão — foto ilustrativa, não é este espaço em concreto.</span>
+    <span data-lang="en" hidden>Example of the type of facility we'll have in Famalicão — illustrative photo, not this exact location.</span>
+  </p>
+</section>
 
 <section class="sizes">
   <div class="sizes-inner">
@@ -363,18 +390,13 @@
       <span data-lang="en" hidden>Security first</span>
     </h2>
     <p class="sub">
-      <span data-lang="pt">Ilustração das medidas de segurança que o espaço vai ter — não são fotos, o espaço ainda está a ser preparado.</span>
-      <span data-lang="en" hidden>Illustration of the security measures the facility will have — not photos, the facility is still being set up.</span>
+      <span data-lang="pt">Fotos ilustrativas do tipo de segurança que o espaço vai ter — não são deste espaço em concreto, o local ainda está a ser preparado.</span>
+      <span data-lang="en" hidden>Illustrative photos of the type of security the facility will have — not this exact location, the facility is still being set up.</span>
     </p>
     <div class="security-grid">
       <div class="security-item">
         <div class="sec-icon">
-          <svg viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="6" y="14" width="20" height="10" rx="2"/>
-            <circle cx="30" cy="19" r="5"/>
-            <circle cx="30" cy="19" r="1.6" fill="#fff"/>
-            <path d="M6 14L4 8h6"/>
-          </svg>
+          <img src="images/security-cctv.jpg" alt="Câmara de videovigilância CCTV" loading="lazy">
         </div>
         <h3><span data-lang="pt">CCTV 24 horas</span><span data-lang="en" hidden>24-hour CCTV</span></h3>
         <p>
@@ -384,11 +406,7 @@
       </div>
       <div class="security-item">
         <div class="sec-icon">
-          <svg viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="16" width="24" height="18" rx="3"/>
-            <path d="M13 16v-4a7 7 0 0 1 14 0v4"/>
-            <circle cx="20" cy="25" r="1.8" fill="#fff" stroke="none"/>
-          </svg>
+          <img src="images/security-access.jpg" alt="Teclado de código de acesso pessoal" loading="lazy">
         </div>
         <h3><span data-lang="pt">Acesso por código pessoal</span><span data-lang="en" hidden>Personal access code</span></h3>
         <p>
@@ -398,14 +416,7 @@
       </div>
       <div class="security-item">
         <div class="sec-icon">
-          <svg viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="6" y1="14" x2="6" y2="32"/>
-            <line x1="16" y1="10" x2="16" y2="32"/>
-            <line x1="26" y1="14" x2="26" y2="32"/>
-            <line x1="4" y1="20" x2="28" y2="20"/>
-            <line x1="4" y1="27" x2="28" y2="27"/>
-            <circle cx="16" cy="7" r="3"/>
-          </svg>
+          <img src="images/security-fence.jpg" alt="Vedação de perímetro com portão" loading="lazy">
         </div>
         <h3><span data-lang="pt">Vedação e iluminação</span><span data-lang="en" hidden>Fenced and lit</span></h3>
         <p>
@@ -428,6 +439,9 @@
   </p>
   <a class="btn btn-primary" href="tel:+351938437951">📞 938 437 951</a>
   <p class="small">StockBox — Self Storage · Vila Nova de Famalicão</p>
+  <p class="small">
+    Fotos: Hankwang (CC BY-SA 3.0) · Ivan Radic (CC BY 2.0) · M J Roscoe (CC BY-SA 2.0) · Ca.garcia.s (CC BY-SA 4.0) — Wikimedia Commons
+  </p>
 </footer>
 
 <script>

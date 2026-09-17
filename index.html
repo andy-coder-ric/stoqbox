@@ -29,6 +29,34 @@
     border-bottom:1px solid #eee;
     gap:14px;
   }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .logo-mark{
+    height:40px;
+    width:auto;
+    display:block;
+  }
+  .brand-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+  .brand-name{
+    font-size:22px;
+    font-weight:700;
+    color:var(--navy);
+  }
+  .brand-name .accent{
+    color:var(--orange);
+  }
+  .brand-tag{
+    font-size:10px;
+    letter-spacing:2px;
+    color:var(--grey);
+  }
   .header-actions{
     display:flex;
     align-items:center;
@@ -330,14 +358,13 @@
 </head>
 <body>
 
-<header>
-  <svg width="200" height="52" viewBox="0 0 280 72" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="10,24 28,15 46,24 28,33" fill="#FF6B35"/>
-    <polygon points="10,24 28,33 28,55 10,46" fill="#D6491A"/>
-    <polygon points="46,24 28,33 28,55 46,46" fill="#FF8F63"/>
-    <text x="58" y="38" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#16233F">Stock<tspan fill="#FF6B35">Box</tspan></text>
-    <text x="59" y="55" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5B6B85" letter-spacing="2">SELF STORAGE</text>
-  </svg>
+<div class="brand">
+    <img src="images/logo.png" alt="StockBox" class="logo-mark">
+    <div class="brand-text">
+      <span class="brand-name">Stock<span class="accent">Box</span></span>
+      <span class="brand-tag">SELF STORAGE</span>
+    </div>
+  </div>
   <div class="header-actions">
     <div class="lang-toggle" role="group" aria-label="Language / Idioma">
       <button type="button" id="btn-pt" class="active" onclick="setLang('pt')">PT</button>

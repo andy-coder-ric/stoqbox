@@ -83,11 +83,6 @@
     max-width:600px;
     margin:0 auto 28px;
   }
-  .locations{
-    margin-top:22px;
-    font-size:13px;
-    color:#c7cede;
-  }
   .price-badge{
     display:inline-block;
     background:var(--orange);
@@ -162,6 +157,99 @@
     font-size:12px;
     color:var(--grey);
     margin-top:4px;
+  }
+  section.cases{
+    background:var(--bg);
+    padding:48px 24px;
+  }
+  .cases-inner{
+    max-width:900px;
+    margin:0 auto;
+  }
+  .cases h2{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:32px;
+  }
+  .cases-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+  }
+  .case-item h3{
+    font-size:17px;
+    margin-bottom:6px;
+  }
+  .case-item p{
+    color:var(--grey);
+    font-size:14px;
+  }
+  .cases-note{
+    text-align:center;
+    color:var(--navy);
+    font-weight:600;
+    font-size:15px;
+    margin-top:32px;
+    padding-top:24px;
+    border-top:1px solid #eee;
+  }
+  section.locations-section{
+    background:#fff;
+    padding:48px 24px;
+  }
+  .locations-inner{
+    max-width:900px;
+    margin:0 auto;
+  }
+  .locations-section h2{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:32px;
+  }
+  .loc-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    max-width:500px;
+    margin:0 auto;
+  }
+  .loc-card{
+    aspect-ratio:1/1;
+    border-radius:14px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+  }
+  .loc-card.active{
+    background:var(--navy);
+    color:#fff;
+  }
+  .loc-card.upcoming{
+    border:2px dashed #d5d9e2;
+    color:var(--grey);
+  }
+  .loc-card .loc-icon{
+    font-size:26px;
+    margin-bottom:10px;
+  }
+  .loc-card h3{
+    font-size:17px;
+    margin-bottom:6px;
+  }
+  .loc-card .loc-status{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .loc-card.active .loc-status{
+    color:var(--orange);
+    font-weight:700;
+  }
+  .loc-card.upcoming .loc-status{
+    color:#9aa3b5;
   }
   section.why{
     max-width:900px;
@@ -282,10 +370,6 @@
       </a>
       <a class="btn btn-secondary" id="whatsapp-btn" href="https://wa.me/351938437951?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20self%20storage%20StockBox" target="_blank" rel="noopener">WhatsApp</a>
     </div>
-    <p class="locations">
-      <span data-lang="pt">📍 Já em Vila Nova de Famalicão — Trofa e outros concelhos a caminho.</span>
-      <span data-lang="en" hidden>📍 Already in Vila Nova de Famalicão — Trofa and other towns coming soon.</span>
-    </p>
   </div>
 </div>
 
@@ -322,6 +406,63 @@
         </div>
         <div class="price">330€ <span><span data-lang="pt">/mês</span><span data-lang="en" hidden>/month</span></span></div>
         <div class="permeter">16,50€/m²</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cases">
+  <div class="cases-inner">
+    <h2>
+      <span data-lang="pt">Para que situações serve</span>
+      <span data-lang="en" hidden>What it's for</span>
+    </h2>
+    <div class="cases-grid">
+      <div class="case-item">
+        <h3>🏠 <span data-lang="pt">Mudança de casa</span><span data-lang="en" hidden>Moving house</span></h3>
+        <p>
+          <span data-lang="pt">Entre sair de uma casa e entrar noutra, guarde tudo sem pressa até estar pronto.</span>
+          <span data-lang="en" hidden>Between leaving one home and moving into another, store everything without rush until you're ready.</span>
+        </p>
+      </div>
+      <div class="case-item">
+        <h3>🛋️ <span data-lang="pt">Mobília nova, casa por preparar</span><span data-lang="en" hidden>New furniture, house not ready yet</span></h3>
+        <p>
+          <span data-lang="pt">Comprou mobília mas a casa nova ainda não está pronta? Fica aqui à espera, em segurança.</span>
+          <span data-lang="en" hidden>Bought furniture but the new house isn't ready yet? It waits here safely.</span>
+        </p>
+      </div>
+      <div class="case-item">
+        <h3>✈️ <span data-lang="pt">Entregou o arrendado, vai viajar</span><span data-lang="en" hidden>Handed back a rental, going travelling</span></h3>
+        <p>
+          <span data-lang="pt">Saiu da casa arrendada antes de viajar? Guardamos tudo até voltar.</span>
+          <span data-lang="en" hidden>Left your rental before a trip? We keep everything until you're back.</span>
+        </p>
+      </div>
+    </div>
+    <p class="cases-note">
+      <span data-lang="pt">Seja qual for o motivo: as suas coisas ficam seguras e recebe-as de volta exatamente como as deixou.</span>
+      <span data-lang="en" hidden>Whatever the reason: your belongings stay safe and you get them back exactly as you left them.</span>
+    </p>
+  </div>
+</section>
+
+<section class="locations-section">
+  <div class="locations-inner">
+    <h2>
+      <span data-lang="pt">Onde estamos</span>
+      <span data-lang="en" hidden>Where we are</span>
+    </h2>
+    <div class="loc-grid">
+      <div class="loc-card active">
+        <div class="loc-icon">📍</div>
+        <h3>Vila Nova de Famalicão</h3>
+        <span class="loc-status"><span data-lang="pt">Disponível agora</span><span data-lang="en" hidden>Available now</span></span>
+      </div>
+      <div class="loc-card upcoming">
+        <div class="loc-icon">📍</div>
+        <h3><span data-lang="pt">Trofa e outros</span><span data-lang="en" hidden>Trofa &amp; more</span></h3>
+        <span class="loc-status"><span data-lang="pt">Brevemente</span><span data-lang="en" hidden>Coming soon</span></span>
       </div>
     </div>
   </div>
